@@ -1,0 +1,796 @@
+@media screen and (max-width:1200px) {
+  body {
+    /* display: none; */
+  }
+  
+  /* при ширине окна < 780px появляпется гориз скролл, найдем "распорки" среди контента которые не дают вьюпорту сузиться */
+
+  /* сначала ищем в исходном css все вхождения c прямым заданием width - они главные претенденты на звание "распорок" */
+  
+  #form-container, #thank-you-container {
+    display: none;
+    width: 100%;
+    padding: 40px 20px;
+    top: 30px;
+    left: 50%;  
+    margin-left: -300px;    
+  }
+  
+  /* *********************************** */
+  /* ************ МИНИЛЕНДОС *********** */
+  /* *********************************** */
+
+  .lp-container {
+    display: none;
+    text-align: center;
+    background-color: #ffffff;
+    /* vot */
+    width: 90%;
+    padding: 0px 0px;
+    border: 2px solid #ffc600;
+    z-index: 180;
+    position: absolute;
+    top: 50px;
+    left: 10px;  
+    margin-left: 10px;
+  }
+  
+  .lp-price {
+    /* padding-bottom: 20px; */
+    font-size: 30px;
+    /* background-color: #0f6688; */
+    color: yellow;
+  }
+
+  /* скрыть из минилендоса знак рубля, скопированный скриптом из прайса вместе с ценой */
+  .lp-price .hover:after {
+    display:none;
+  }
+
+  .lp-steklo-podarok {
+    display: none;
+    font-size: 16px;
+  }
+
+  .lp-header {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .lp-caption {
+    font-size: 12px;
+    font-weight: 200;
+  }
+
+  .lp-section-01, .lp-section-02 {
+    padding: 40px 40px;
+  }
+
+  .lp-section-01 {
+    background-color: #0076a3;  
+    color: #fff;  
+  }
+
+  .lp-section-02 {
+    background-color: #fff;
+    color: #333;  
+  }
+
+  #lp-button-container {  
+    display: block;
+    padding: 0 20px;
+    margin-bottom: 40px;
+  }
+
+  #left-button {
+    /* display: none; */
+  }
+
+  .lp-button-caption {
+    /* max-width: 220px; */
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .slider-container {
+    /* vot */
+    width: 100%;
+    height: auto;  
+    position: static;    
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.42);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.42);
+    margin: 40px 0 0 0;
+    overflow: hidden;
+  }
+  
+  #slider-instagram {
+    width: 100%;
+  }
+
+  #slider-instagram img {
+    /* width: 100% */
+  }
+
+  
+  /* методом исключения прячем куски контента пока не найдём все "распорки" */
+  
+  /* слайдер? */
+  .slider-container {
+    /* нет */
+    /* display: none;  */
+  }
+  
+  /* не помогло - до сих пор висит линейка скрола */  
+  /* значит причина в том что какой-то элемент сам не может сузиться <780 */
+  /* теперь ищем претендентов визуально на странице */
+  /* скорее всего это флексбокс-конейнер с горизотнальной ориентацией контента с большим кол-вом элементов, которые не могут перенестись на след строку */
+  
+  /* прайс? */
+  #section-09 {
+    /* нет */
+    /* display: none;  */
+  }
+  
+  /* запчасти? */
+  #section-07 {
+    /* ДА - виновник распорки на ширине 780px */
+    /* из-за флексбокса стояли влотную не переносились вниз */
+    /* display: none;  */
+  }
+  
+  /* теперь линейка появляется при ширине окна < 394px продолжаем искать виновника, опять сначала прогоняем по width - самый "широкий" около 150 пикс, значит не из за него */  
+  /* теперь уж наверняка флексбоксные контейнеры виноваты */
+  
+  /* меню? */
+  #section-01 {
+    /* нет */
+    /* display: none; */
+  }
+  
+  /* херо секшн ? */
+  #section-02 {
+    /* ДА - большой паддинг слева и размер шрифта */
+    /* display: none;  */
+  }
+  
+  /* дальше уже наинчается много распорок в основном из-за гориз флексбоксов - в общем на этом шаге осталось переориентировать верикально горизонтальные флексбоксы и сузить шрифты */
+
+  #container-inner-03 {
+    padding: 80px 20px 40px;
+  }
+
+  #content-03-01 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+
+  #content-03-02 {
+    color: #1a8984;
+    font-size: 20px;
+    line-height: 34px;
+  }
+
+  /* --- */
+  
+  #container-inner-04 {
+    padding-bottom: 60px;
+  }
+
+
+  #content-04-01-span-01 {   
+    font-size: 75px;    
+  }  
+  
+  #content-04-01-span-04 {   
+    font-size: 75px;
+    letter-spacing: -3px;
+  }  
+  
+  #content-04-01-span-05 {    
+    font-size: 55px;
+    line-height: 70px;
+  }  
+  
+  /* --- */
+  
+  #container-inner-05 {
+    padding-top: 60px;  
+  }
+
+
+  #content-05-01 {    
+    font-size: 28px;
+    font-weight: 700; 
+    text-align: center; 
+    margin-bottom: 50px;
+  }
+
+  #content-05-02 {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .content-05-02 {
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 70px;
+    padding-top: 10px;
+    min-height: 70px;
+    margin-bottom: 30px;
+  }
+    
+  #content-05-02-01 { background-size: 45px }
+  #content-05-02-02 { background-size: 45px }
+  #content-05-02-03 { background-size: 45px }
+
+  #content-05-03 {
+    margin-bottom: 30px;
+  }
+  
+  /* --- */
+  
+  #section-06 {
+    /* padding: 60px 0; */
+  }
+          
+  #content-06-01 {
+    font-size: 28px;
+    line-height: 46px;
+  }
+  
+  /* --- */
+  
+  #container-inner-07 {
+    padding: 80px 0;
+  }
+  
+  #content-07-01 {
+    font-size: 28px;
+  }
+  
+  #content-07-02 {    
+    display: block;    
+  }
+  
+  .content-07-02 {   
+    margin: 0 auto 20px;    
+  }
+  
+  /* --- */
+  
+  #container-inner-08 {
+    padding: 80px 20px 50px;    
+  }
+  
+  #content-08-01 {    
+    font-size: 28px;
+    line-height: 38px;    
+    margin-bottom: 25px;  
+  }
+  
+  #content-08-02 {  
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  
+  #content-08-03 {    
+    font-size: 28px;
+    font-weight: 600;  
+    margin-bottom: 35px;  
+  }
+  
+  #content-08-04 {    
+    margin-bottom: 50px;
+  }
+  
+  #content-08-05 {
+    display: block;   
+  }
+  
+  .content-08-05 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* --- */
+  
+  #section-10 {
+    background: #157873;
+  }
+  
+  #content-10-01 {    
+    font-size: 28px;    
+    line-height: 38px;    
+    margin-bottom: 50px;
+  }
+  
+  #content-10-02 {
+    display: block;
+    text-align: center;
+  }
+  
+  #content-10-02-01 {
+    margin: 20px 0;
+  }
+  
+  /* --- */  
+  
+  #content-11-01 {
+    color: #6d6d6d;  
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 38px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  
+  #content-11-02 {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .content-11-02-question {
+    width: 100%;
+    height: auto;
+    line-height: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+  
+  .content-11-02-answer {
+    font-size: 13px;
+    line-height: 24px;
+    padding-right: 30px;
+  }
+  
+  .content-11-02-answer:not(.visible-answer) {
+    display: none;
+  }
+  
+  /* --- */
+  
+  #container-inner-12 {
+    padding: 80px 20px 10px;
+  }
+  
+  #content-12-01 {
+    display: block;
+    text-align: left;
+  }
+  
+  .content-12-01 {   
+    margin-bottom: 50px;
+  }
+  
+  /* --- */
+  
+  #section-01 {
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  #container-inner-01  {
+    height: 76px;
+    display: block;
+    padding: 20px 10px;
+  }
+  
+  #logo-a {
+    display: inline-block;
+  }
+  
+  #logo-a img {
+    width: 100px;
+  }
+  
+  #content-01-01 {
+    display: none;
+  }
+  
+  #content-01-02 #tel-header-icon {
+    display: none;    
+  }
+  
+  #content-01-02 {    
+    float: right;
+    font-size: 20px;
+    font-weight: 400;
+    position: relative;
+    top: 3px;
+  }
+  
+  #messengers {
+    display: none;
+  }
+  
+  /* --- */
+  
+  #section-02 {
+    /* background: #146f6b; */
+    background: #1b9189;
+    background: -moz-linear-gradient(-45deg, #1b9189 0%, #60c79c 100%);
+    background: -webkit-linear-gradient(-45deg, #1b9189 0%,#60c79c 100%);
+    background: linear-gradient(135deg, #1b9189 0%,#60c79c 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1b9189', endColorstr='#60c79c',GradientType=1 );
+    background: url(img/bg01sm.jpg) 10% center no-repeat #1cbbb4;
+    background-size: cover;
+  }
+
+  #wrapper-02 {
+    max-width: 600px;    
+    margin-left: 0;  
+    padding: 50px 20px 1px; /* нижний паддинг в 0 не ставь - а то обнулится нижний марджин родителя вместо 40, какое-то правило в цссе */
+  }
+
+  #content-02-01 {
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 40px;
+    max-width: 300px;
+  }
+
+  .content-02-02-header {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .content-02-02-memo {    
+    font-size: 12px;    
+    line-height: 18px;
+  }
+
+  .button {
+    width: 100%;
+    height: auto;
+    padding: 10px 10px;
+    line-height: 30px;
+
+  }
+
+  .button img {
+    display: none;
+  }
+
+  #section-02-hero-img {
+    display: none;
+  }
+
+  /*  ПРАЙС */
+
+  #container-inner-09 {
+    padding: 60px 10px 0;
+    /* background: url("img/orig.webp") no-repeat 10% bottom / 30%; */
+    background: none;
+  }
+
+  #content-09-01 {    
+    font-size: 36px;        
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  #content-09-02 {    
+    font-size: 14px;    
+    line-height: 24px;    
+    margin: 20px auto;
+    margin-bottom: 60px;
+  }
+
+
+  #content-09-022 {    
+    /* margin-bottom: 30px; */
+    background-color: #0e557c25;
+    padding: 40px 10px;    
+    text-align: center;
+    position: relative;
+  }
+
+  #content-09-022 img {
+    position: static;
+    display: inline-block;  
+    margin-bottom: 20px;
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  #content-09-022-01 {
+    display: block;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  #content-09-022-02 {
+    position: static;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  #content-09-022-02-span-02 {
+    color: #777;
+    font-size: 15px;
+  }
+
+  #pricelist-container {
+    margin-bottom: 0px;
+  }
+
+  #content-09-03 {    
+    color: #075f81;  
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;  
+    max-width: 550px;
+    /* margin: 20px auto; */
+    margin-left: 460px;
+  }
+
+  #content-09-04 {
+    color: #d11e11;  
+    font-size: 12px;
+    position: absolute;
+    bottom: 150px;
+    left: 270px;
+    background-color: #afd2d3;
+    padding: 5px 15px;
+    border-radius: 3px;
+  }
+
+  /* стилизуем переключатели устройств (айфоны / айпады / макбуки */
+
+  .button_to li {
+    position: relative;
+    border: none !important;
+    font-size: 23px;
+    text-align: left !important;    
+    width: auto !important;
+  }
+
+  .button_to li.active {
+    border-bottom: solid 2px #bec1c2 !important;
+    font-size: 30px;
+  }
+
+  div.tab-content {
+    /* display: none; */
+  } 
+
+  div.tab-pane {
+    margin-bottom: 80px;
+  }
+
+  ul.nav {
+    list-style: none;
+    margin-bottom: 20px;
+  }
+
+  ul.nav li {
+    display: inline-block;
+    width: auto;
+    /* height: 40px; */
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid grey;
+    margin: 0 16px 12px 0;
+    padding: 10px 10px;
+  }
+
+  ul.nav li a {
+    text-decoration: none;
+    color: #076282;
+  }
+
+  ul.nav li:hover {
+    background-color: #166687;
+    cursor: pointer;
+  }
+
+  ul.nav li:hover a {
+    color: #fff;
+  }
+
+  ul.nav li span.mac-year {
+    font-size: 12px;
+  }
+
+  table.price-table {
+    border-collapse: collapse;
+  }
+
+  table.price-table td:nth-of-type(1) { display:none; }
+  table.price-table td:nth-of-type(2) { width: 80% }
+  table.price-table td:nth-of-type(3) { display:none; }
+  table.price-table td:nth-of-type(4) { width: 20%;}
+
+  table.price-table tr:nth-of-type(1) {
+    font-size: 14px;
+    background-color: #12aaaf !important;
+    color: #fff;
+  }
+
+  table.price-table tr:nth-of-type(2n+1) {
+    background-color: rgba(28, 187, 180, .1)
+  }
+
+  table.price-table tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  table.price-table td {
+    vertical-align: middle;
+    padding: 10px 10px;
+    border: 1px rgba(0, 0, 0,.1) solid;
+    font-size: 11px;
+  }
+
+  #tab1, #tab2 {
+    display: none;
+  }
+
+  div[role='tabpanel']:not(#iphone4) {
+    display: none;
+  }
+
+  tr:not(.no-hover) td:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  tr:hover { 
+    background-color: #fcedce !important;
+  }
+
+  /* мобильный селектор звголовка столюца цен пока скроем */
+  .mobile.text {
+    display: none;
+  }
+
+  /* скрываем на мобиле все кнопки про вызов мастера пока */
+
+  .js-click-order, 
+    #content-10-02-01, 
+    #content-12-01-ul-03 li:nth-of-type(3),
+    #content-09-03,
+    #content-09-04
+
+    {
+    display: none !important;
+  }
+
+  /* *********************************** */
+  /* ********* ХЕЛП-ВСПЛЫВАШКА********** */
+  /* *********************************** */
+
+  .help-lightbox {
+    padding: 30px 15px;
+    text-align: left;
+    /* max-width: 500px; */
+  }
+
+  .help-lightbox ul {
+    list-style: none;
+  }
+
+  .help-header {
+    font-size: 23px;
+    margin-bottom: 15px;
+  }
+
+  .help-text-01 {
+    font-size: 16px;
+    margin-bottom: 25px;  
+  }
+
+  .help-lightbox li {
+    padding: 10px;
+    font-size: 12px;  
+  }
+
+  .help-lightbox li:nth-of-type(2n) {
+    background-color: rgba(0,0,0,.05);
+  }
+
+
+  .help-lightbox li span {
+    display: inline-block;
+    padding: 0 5px;
+  }
+
+  .help-lightbox li span:nth-of-type(1) {width: 30%}
+
+  .help-lightbox li span:nth-of-type(2) {width: 50%}
+
+  .help-lightbox li span:nth-of-type(3) {
+    width: 20%;
+    color: #0076a3;
+    cursor: pointer;
+  }
+
+  .help-lightbox li span:nth-of-type(3):hover {
+    text-decoration: underline;
+  }
+
+  #mob-whatsapp-panel {
+    display: block;
+    position: fixed;
+    background-color: rgb(240, 240, 240) !important;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px #ddd solid;
+    font-size: 20px;
+  }
+
+  #mob-whatsapp-panel span, #mob-whatsapp-panel a {
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: middle;
+  }
+
+  #mob-whatsapp-panel span {
+    margin-right: 10px;
+  }
+
+  #section-07-obrazovanie {
+  background-color: #eee;
+}
+
+#container-inner-07-obrazovanie {
+  padding: 80px 20px 0;
+}
+
+#container-inner-07-obrazovanie img {
+  display:block;
+  position: static;  
+  max-width: 100%;  
+  margin: 0 auto 40px;
+}
+
+#obrazovanie-text {
+  text-align: center;
+  display: block;  
+  margin: 0 auto;
+  padding: 0 20px 80px;
+  max-width: 500px;  
+}
+
+.obrazovanie-text-header {
+  color: #035d80;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.obrazovanie-text-memo {
+  color: #035d80;
+  font-size: 20px;
+  font-weight: 100;  
+  line-height: 30px;
+}
+
+
+}
+
+/*  типа на айпадах */
+@media screen and (max-width:1200px) and (min-width:767px) {
+
+  #section-02 {
+    background: url(img/bg01.jpg) center center no-repeat #1cbbb4;
+    background-size: cover;
+  }
+  
+  /* футер */
+  #content-12-01 {
+    display: block;
+    text-align: center;
+  }
+
+}
