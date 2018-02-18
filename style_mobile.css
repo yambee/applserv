@@ -7,15 +7,41 @@
 
   /* сначала ищем в исходном css все вхождения c прямым заданием width - они главные претенденты на звание "распорок" */
   
-  #form-container, #thank-you-container {
+  /* #form-container, #thank-you-container {
     display: none;
     width: 100%;
     padding: 40px 20px;
     top: 30px;
     left: 50%;  
     margin-left: -300px;    
+  } */
+  
+  #form-container, #thank-you-container {
+    display: none;
+    text-align: center;
+    text-align: left;
+    background-color: #ffffff;
+    /* vot */
+    width: 90%;
+    padding: 40px 30px;
+    border: 2px solid #ffc600;
+    border-radius: 10px;
+    z-index: 180;
+    position: absolute;
+    top: 50px;
+    left: 10px;  
+    margin-left: 10px;
   }
   
+  #form-header {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .form-header-02, #form-tel-number {
+    display: none;
+  }
+
   /* *********************************** */
   /* ************ МИНИЛЕНДОС *********** */
   /* *********************************** */
@@ -653,14 +679,16 @@
   /* скрываем на мобиле все кнопки про вызов мастера пока */
 
   .js-click-order, 
-    #content-10-02-01, 
-    #content-12-01-ul-03 li:nth-of-type(3),
-    #content-09-03,
-    #content-09-04
-
-    {
+  #content-10-02-01, 
+  #content-12-01-ul-03 li:nth-of-type(3),
+  #content-09-03,
+  #content-09-04
+  
+  {
     display: none !important;
   }
+  
+  .js-click-order {display: block !important}
 
   /* *********************************** */
   /* ********* ХЕЛП-ВСПЛЫВАШКА********** */

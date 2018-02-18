@@ -1186,3 +1186,140 @@ tr:hover {
   font-size: 24px;
   font-weight: 100;  
 }
+
+/* КНОПКА ПУЛЬСИРУЮЩЕГО ТЕЛЕФОНА НАЧАЛО */ 
+  
+#SCBbuttonMain {
+  display: block;
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  width: 110px;
+  height: 110px;
+  cursor: pointer;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: visibility .5s;
+  -moz-transition: visibility .5s;
+  -o-transition: visibility .5s;
+  transition: visibility .5s;
+  opacity: 1;
+  z-index: 9999997;
+}
+
+.scb_bg_puls {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  -webkit-border-radius: 100% !important;
+  -moz-border-radius: 100% !important;
+  border-radius: 100% !important;
+  border: 2px solid #ffffff;
+  /* background-color: #643794; */
+  background-color: #035d80;
+  /* opacity: .75 !important; */
+  -webkit-animation: scb_bg_puls_anime 2.5s infinite ease-in-out;
+  animation: scb_bg_puls_anime 2.5s infinite ease-in-out;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  z-index: 16776001;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+}
+
+.scb_but_img {
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  left: 20%;
+  top: 20%;
+  background: no-repeat center center;
+  /* background-color: #643794; */
+  background-color: #035d80;
+  -webkit-border-radius: 100% !important;
+  -moz-border-radius: 100% !important;
+  border-radius: 100% !important;
+  border: 2px solid #ffffff;
+  opacity: .8;
+  z-index: 16776002;
+  /* box-sizing: border-box; */
+} 
+
+.phone_icon_img {
+  margin: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+@-webkit-keyframes scb_bg_puls_anime {
+  0% {
+    transform: /*rotate(0deg) */scale(0.7) skew(1deg);
+    -webkit-transform: /*rotate(0deg) */scale(0.7) skew(1deg);
+    -ms-transform: /*rotate(0deg) */scale(0.7) skew(1deg);
+    -o-transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    -moz-transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    opacity: .2;
+    -moz-transform-origin: 50% 50%;
+    }
+  50% {
+    transform: /*rotate(0deg)*/ scale(1) /*skew(1deg)*/;
+    -webkit-transform: /*rotate(0deg)*/ scale(1) /*skew(1deg)*/;
+    -ms-transform: rotate(0deg) scale(1) /*skew(1deg)*/;
+    -o-transform: rotate(0deg) scale(1) /*skew(1deg)*/;
+    -moz-transform: rotate(0deg) scale(1) /*skew(1deg)*/;
+    opacity: .2;
+  }
+  100% {
+    transform: rotate(0deg) scale(0.7) skew(1deg);
+    -webkit-transform: rotate(0deg) scale(0.7) skew(1deg);
+    -ms-transform: rotate(0deg) scale(0.7) skew(1deg);
+    -o-transform: rotate(0deg) scale(0.7) skew(1deg);
+    -moz-transform: rotate(0deg) scale(0.7) skew(1deg);
+    opacity: .2;
+  }
+}
+
+@keyframes scb_bg_puls_anime {
+  0% {
+    -webkit-transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    -moz-transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    -ms-transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    -o-transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    opacity: .2;
+  }
+  50% {
+    -webkit-transform: /*rotate(0deg)*/ scale(1) /*skew(1deg)*/;
+    -moz-transform: /*rotate(0deg)*/ scale(1) /*skew(1deg)*/;
+    -ms-transform: /*rotate(0deg)*/ scale(1) /*skew(1deg)*/;
+    -o-transform: /*rotate(0deg)*/ scale(1) /*skew(1deg)*/;
+    transform: /*rotate(0deg)*/ scale(1) /*skew(1deg)*/;
+    opacity: .2;
+  }
+  100% {
+    -webkit-transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    -moz-transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    -ms-transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    -o-transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    transform: /*rotate(0deg)*/ scale(0.7) skew(1deg);
+    opacity: .2;
+  }
+}
+
+  /* КНОПКА ПУЛЬСИРУЮЩЕГО ТЕЛЕФОНА КОНЕЦ */ 
